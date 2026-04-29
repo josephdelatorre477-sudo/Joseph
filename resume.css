@@ -298,7 +298,7 @@
   .section-card {
     background: var(--card-bg);
     border-radius: var(--radius);
-    padding: 36px;
+    padding: 48px;
     margin-bottom: 24px;
     box-shadow: 0 2px 12px rgba(0,0,0,.04);
   }
@@ -946,6 +946,73 @@
 
     .gallery-image-wrapper {
       max-height: 280px;
+    }
+  }
+
+  /* ── STRENGTHS ── */
+  #strengths {
+    padding: 40px 0;
+  }
+
+  .strengths-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .strength-card {
+    background: #5a7a65;
+    border-radius: 14px;
+    padding: 28px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .strength-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(90, 122, 101, 0.3);
+  }
+
+  .strength-icon {
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .strength-icon i {
+    font-size: 18px;
+    color: #e8f5ec;
+  }
+
+  .strength-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: #e8f5ec;
+    margin: 0;
+  }
+
+  .strength-desc {
+    font-size: 13px;
+    color: #b8d4be;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  @media (max-width: 900px) {
+    .strengths-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 580px) {
+    .strengths-grid {
+      grid-template-columns: 1fr;
     }
   }
 
