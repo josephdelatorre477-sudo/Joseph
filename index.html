@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Joseph P. Delatorre – Resume</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="resume.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+
+<!-- ── MOBILE MENU BUTTON ── -->
+<button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
+<!-- ── ICON NAV SIDEBAR ── -->
+<nav class="icon-sidebar">
+  <div class="logo">CV</div>
+  <a href="#about" class="nav-link active">
+    <i class="fas fa-user"></i>
+    <span>About</span>
+  </a>
+  <a href="#experience" class="nav-link">
+    <i class="fas fa-briefcase"></i>
+    <span>Experience</span>
+  </a>
+  <a href="#education" class="nav-link">
+    <i class="fas fa-graduation-cap"></i>
+    <span>Education</span>
+  </a>
+  <a href="#skills" class="nav-link">
+    <i class="fas fa-code"></i>
+    <span>Skills</span>
+  </a>
+  <a href="#achievements" class="nav-link">
+    <i class="fas fa-trophy"></i>
+    <span>Achievements</span>
+  </a>
+  <a href="#contact" class="nav-link">
+    <i class="fas fa-envelope"></i>
+    <span>Contact</span>
+  </a>
+</nav>
+
+<!-- ── PROFILE SIDEBAR ── -->
+<aside class="profile-sidebar">
+  <div class="profile-photo">
+    <img src="Image/grd.jpg" alt="Joseph P. Delatorre Profile Picture">
+  </div>
+
+  <div class="profile-name">Joseph P. Delatorre</div>
+  <div class="profile-role">IT Specialist</div>
+
+  <div class="profile-divider"></div>
+
+  <div class="info-tag">
+    <span class="label">Age</span>
+    <span class="value">22</span>
+  </div>
+  <div class="info-tag">
+    <span class="label">Residence</span>
+    <span class="value">Philippines</span>
+  </div>
+  <div class="info-tag">
+    <span class="label">Address</span>
+    <span class="value">Abgao,Maasin City Southern Leyte, Philippines</span>
+  </div>
+  
+  <div class="info-tag">
+    <span class="label">Language</span>
+    <span class="value"><span class="available-badge">English</span></span>
+  </div>
+
+  <div class="profile-btns">
+    <a href="#" onclick="downloadPDF(); return false;" class="btn btn-outline"><i class="fas fa-download"></i> Download CV</a>
+    <a href="#contact" onclick="showSection('contact'); return false;" class="btn btn-solid"><i class="fas fa-paper-plane"></i> Contact</a>
+  </div>
+</aside>
+
+<!-- ── MAIN CONTENT ── -->
+<main class="main-content">
+
+  <!-- ABOUT -->
+  <section id="about" class="section-card">
+    <h2 class="section-title"><span class="accent">A</span>bout Me</h2>
+    <p class="about-text">
+      <strong>Hello! I'm Joseph P. Delatorre.</strong> Results-driven IT Specialist with extensive experience in information technology and web development. Adept at delivering clean, functional, and visually engaging digital solutions — from architecture to implementation. Thrives on complex, creative challenges and is committed to building high-quality digital experiences that balance technical rigor with intuitive design.
+    </p>
+
+    <h3 style="font-size:16px;font-weight:700;margin-bottom:16px;color:var(--text)"><span style="color:var(--green)">M</span>y Services</h3>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-code"></i></div>
+        <h4>Web Development</h4>
+        <p>Modern and mobile-ready websites that will help you reach your audience.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-network-wired"></i></div>
+        <h4>Network Setup & Cabling</h4>
+        <p>Creating LAN cables, setting up networks, configuring systems, and resolving common hardware issues.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
+        <h4>UI/UX Design</h4>
+        <p>Crafting beautiful, responsive interfaces using CSS and modern design principles that balance aesthetics with functionality.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-lightbulb"></i></div>
+        <h4>System Analysis & Solutions</h4>
+        <p>I identify problems, propose smart solutions, and implement strategies that deliver real results.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-tools"></i></div>
+        <h4>Hardware Trouble Shooter</h4>
+        <p>Diagnosing and repairing hardware issues to ensure optimal performance.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-cogs"></i></div>
+        <h4>IT Consulting</h4>
+        <p>Providing comprehensive IT solutions to optimize operations, enhance security, and drive digital transformation for businesses.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK EXPERIENCE -->
+  <section id="experience" class="section-card">
+    <h2 class="section-title"><span class="accent">W</span>ork Experience</h2>
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-header">
+          <div>
+            <div class="timeline-role">Tourism System Developer</div>
+            <div class="timeline-company">Southern Leyte Tourism Project</div>
+          </div>
+          <span class="timeline-date">Current</span>
+        </div>
+        <p class="timeline-desc">Built a Progressive Web App (PWA) to immediately solve the tourism survey form issue, making it easy for tourists to submit feedback. Also created a tourism website that showcases local attractions, destinations, hotels, and complete visitor information for Southern Leyte.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-header">
+          <div>
+            <div class="timeline-role">System Support & Troubleshooter</div>
+            <div class="timeline-company">Maasin Arena Cockpit</div>
+          </div>
+          <span class="timeline-date">Current</span>
+        </div>
+        <p class="timeline-desc">Managed the Talpak system for Maasin Arena Cockpit, troubleshooting every teller PC and keeping hardware running smoothly. Worked with developers to report and resolve system issues, ensuring reliable updates and better performance.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="section-card">
+    <h2 class="section-title"><span class="accent">E</span>ducation</h2>
+    <div class="edu-grid">
+      <div class="edu-card">
+        <div class="edu-icon"><i class="fas fa-university"></i></div>
+        <h4>Bachelor of Science in Information Technology</h4>
+        <div class="school">Saint Joseph College, Southern Leyte</div>
+        <div class="year">2025 – 2026</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section-card">
+    <h2 class="section-title"><span class="accent">S</span>kills</h2>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h4>Frontend</h4>
+        <div class="skill-tags">
+          <span class="skill-tag">HTML5</span>
+          <span class="skill-tag">CSS3</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">React</span>
+          <span class="skill-tag">Tailwind</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4>Backend & CMS</h4>
+        <div class="skill-tags">
+          <span class="skill-tag">WordPress</span>
+          <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">PHP</span>
+          <span class="skill-tag">MySQL</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4>Hardware</h4>
+        <div class="skill-tags">
+          <span class="skill-tag">PC Maintenance</span>
+          <span class="skill-tag">Hardware Troubleshooting</span>
+          <span class="skill-tag">Preventive Maintenance</span>
+          <span class="skill-tag">System Administration</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4>Software</h4>
+        <div class="skill-tags">
+          <span class="skill-tag">System Creation</span>
+          <span class="skill-tag">Planning</span>
+          <span class="skill-tag">Technology Problem Solving</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4>Design Tools</h4>
+        <div class="skill-tags">
+          
+          <span class="skill-tag">Adobe XD</span>
+          <span class="skill-tag">Photoshop</span>
+          
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4>Other</h4>
+        <div class="skill-tags">
+          
+          <span class="skill-tag">SEO/Search Engine Optimization</span>
+          <span class="skill-tag">REST APIs</span>
+          <span class="skill-tag">Agile</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section id="achievements" class="section-card">
+    <h2 class="section-title"><span class="accent">A</span>chievements</h2>
+    <div class="achievements-grid">
+      
+      <div class="achievement-card">
+        <div class="achievement-image">
+          <i class="fas fa-mobile-alt"></i>
+        </div>
+        <div class="achievement-content">
+          <h4>Progressive Web App (PWA) - Tourism Survey</h4>
+          <p>Built a Progressive Web App to immediately solve the tourism survey form issue, making it easy for tourists to submit feedback in real-time. The app features offline functionality and instant data synchronization.</p>
+          <div class="achievement-tags">
+            <span class="tag">PWA</span>
+            <span class="tag">Service Worker</span>
+            <span class="tag">Real-time</span>
+          </div>
+          <a href="#" class="achievement-btn" onclick="openGallery('pwa'); return false;"><i class="fas fa-external-link-alt"></i> View Project</a>
+        </div>
+      </div>
+
+      <div class="achievement-card">
+        <div class="achievement-image">
+          <i class="fas fa-globe"></i>
+        </div>
+        <div class="achievement-content">
+          <h4>Southern Leyte Tourism Website</h4>
+          <p>Created a comprehensive tourism website showcasing local attractions, destinations, hotels, and complete visitor information for Southern Leyte. Designed to boost local tourism and provide travelers with all necessary travel guidance.</p>
+          <div class="achievement-tags">
+            <span class="tag">Web Design</span>
+            <span class="tag">SEO</span>
+            <span class="tag">Tourism</span>
+          </div>
+          <a href="#" class="achievement-btn" onclick="openGallery('tourism'); return false;"><i class="fas fa-external-link-alt"></i> View Project</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section-card">
+    <h2 class="section-title"><span class="accent">C</span>ontact</h2>
+    <div class="contact-grid">
+      <a href="mailto:josephdelatorre2580@gmail.com" class="contact-item" data-copy="josephdelatorre2580@gmail.com">
+        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+        <div>
+          <span>Email</span>
+          <small>josephdelatorre2580@gmail.com</small>
+        </div>
+      </a>
+      <a href="tel:+639061902063" class="contact-item" data-copy="+63 906 190 2063">
+        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+        <div>
+          <span>Phone</span>
+          <small>+63 906 190 2063</small>
+        </div>
+      </a>
+      <a href="https://www.google.com/maps/place/Abgao,+Maasin,+Southern+Leyte,+Philippines/@10.1374304,124.8444805" target="_blank" class="contact-item">
+        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+        <div>
+          <span>Location</span>
+          <small>Maasin City,Southern Leyte, Philippines</small>
+        </div>
+      </a>
+      <a href="https://www.facebook.com/joseph.delatorre.99260/" target="_blank" class="contact-item">
+        <div class="contact-icon"><i class="fab fa-facebook-f"></i></div>
+        <div>
+          <span>Facebook</span>
+          <small>Joseph Delatorre</small>
+        </div>
+      </a>
+      <a href="https://www.instagram.com/boangtae" target="_blank" class="contact-item">
+        <div class="contact-icon"><i class="fab fa-instagram"></i></div>
+        <div>
+          <span>Instagram</span>
+          <small>@boangtae</small>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Designed & Built by <a href="#">Joseph P. Delatorre</a> · © 2026 · All rights reserved</p>
+  </footer>
+
+</main>
+
+<!-- ── IMAGE GALLERY MODAL ── -->
+<div id="galleryModal" class="gallery-modal">
+  <div class="gallery-container">
+    <button class="gallery-close" onclick="closeGallery()">&times;</button>
+    
+    <div class="gallery-header">
+      <h2 id="galleryTitle">Project Gallery</h2>
+      <p id="galleryDesc"></p>
+    </div>
+
+    <div class="gallery-viewer">
+      <button class="gallery-nav gallery-prev" onclick="previousImage()">&lt;</button>
+      
+      <div class="gallery-image-wrapper">
+        <img id="galleryImage" src="" alt="Gallery Image" class="gallery-image">
+        <div class="gallery-counter">
+          <span id="currentImage">1</span> / <span id="totalImages">1</span>
+        </div>
+      </div>
+
+      <button class="gallery-nav gallery-next" onclick="nextImage()">&gt;</button>
+    </div>
+
+    <div class="gallery-thumbnails">
+      <div id="thumbnailContainer" class="thumbnail-list"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Gallery data for projects
+  const galleryData = {
+    tourism: {
+      title: 'Southern Leyte Tourism Website',
+      description: 'Showcase of the tourism website featuring local attractions, destinations, and visitor information.',
+      images: [
+        'image/tour.png',
+        'image/web1.png',
+        'image/web2.png',
+        'image/web3.png',
+        'image/web4.png',
+        'image/web5.png',
+        'image/web6.png'
+      ]
+    },
+    pwa: {
+      title: 'Progressive Web App (PWA) - Tourism Survey',
+      description: 'Mobile-responsive PWA for collecting tourism survey feedback with offline capability and real-time sync.',
+      images: [
+        
+        'image/s1.webp',
+        'image/s2.webp',
+        'image/s3.webp',
+        'image/s4.webp',
+        'image/s5.webp',
+        'image/s6.webp',
+        'image/s7.webp',
+        'image/s8.webp'
+      ]
+    }
+  };
+
+  let currentGallery = null;
+  let currentImageIndex = 0;
+
+  // Open gallery modal
+  function openGallery(projectType) {
+    const project = galleryData[projectType];
+    if (!project) return;
+
+    currentGallery = projectType;
+    currentImageIndex = 0;
+
+    // Set title and description
+    document.getElementById('galleryTitle').textContent = project.title;
+    document.getElementById('galleryDesc').textContent = project.description;
+    document.getElementById('totalImages').textContent = project.images.length;
+
+    // Create thumbnails
+    const thumbnailContainer = document.getElementById('thumbnailContainer');
+    thumbnailContainer.innerHTML = '';
+    project.images.forEach((img, index) => {
+      const thumb = document.createElement('img');
+      thumb.src = img;
+      thumb.alt = `Thumbnail ${index + 1}`;
+      thumb.className = 'thumbnail ' + (index === 0 ? 'active' : '');
+      thumb.onclick = () => {
+        currentImageIndex = index;
+        displayImage();
+      };
+      thumbnailContainer.appendChild(thumb);
+    });
+
+    // Display first image
+    displayImage();
+
+    // Show modal
+    document.getElementById('galleryModal').classList.add('active');
+  }
+
+  // Close gallery
+  function closeGallery() {
+    document.getElementById('galleryModal').classList.remove('active');
+    currentGallery = null;
+  }
+
+  // Display current image
+  function displayImage() {
+    if (!currentGallery) return;
+
+    const project = galleryData[currentGallery];
+    const image = project.images[currentImageIndex];
+
+    document.getElementById('galleryImage').src = image;
+    document.getElementById('currentImage').textContent = currentImageIndex + 1;
+
+    // Update thumbnail highlighting
+    const thumbnails = document.querySelectorAll('.thumbnail');
+    thumbnails.forEach((thumb, index) => {
+      thumb.classList.toggle('active', index === currentImageIndex);
+    });
+  }
+
+  // Navigate to next image
+  function nextImage() {
+    if (!currentGallery) return;
+    const project = galleryData[currentGallery];
+    currentImageIndex = (currentImageIndex + 1) % project.images.length;
+    displayImage();
+  }
+
+  // Navigate to previous image
+  function previousImage() {
+    if (!currentGallery) return;
+    const project = galleryData[currentGallery];
+    currentImageIndex = (currentImageIndex - 1 + project.images.length) % project.images.length;
+    displayImage();
+  }
+
+  // Close modal when clicking outside
+  document.addEventListener('click', function(event) {
+    const modal = document.getElementById('galleryModal');
+    if (event.target === modal) {
+      closeGallery();
+    }
+  });
+
+  // Keyboard navigation
+  document.addEventListener('keydown', function(event) {
+    if (!currentGallery) return;
+    if (event.key === 'ArrowRight') nextImage();
+    if (event.key === 'ArrowLeft') previousImage();
+    if (event.key === 'Escape') closeGallery();
+  });
+
+  // Active nav highlight and section toggle
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  function showSection(sectionId) {
+    sections.forEach(section => {
+      if (section.id === sectionId) {
+        section.style.display = 'block';
+      } else {
+        section.style.display = 'none';
+      }
+    });
+    navLinks.forEach(link => {
+      link.classList.toggle('active', link.getAttribute('href') === '#' + sectionId);
+    });
+  }
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      showSection(targetId);
+    });
+  });
+
+  // Initially show about
+  showSection('about');
+
+  // Add scroll animation observer
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.animation = 'fadeUp 0.5s forwards';
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.achievement-card').forEach(card => {
+    observer.observe(card);
+  });
+</script>
+
+<!-- ── MOBILE MENU TOGGLE ── -->
+<script>
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const iconSidebar = document.querySelector('.icon-sidebar');
+  const profileSidebar = document.querySelector('.profile-sidebar');
+
+  mobileMenuBtn.addEventListener('click', () => {
+    mobileMenuBtn.classList.toggle('active');
+    iconSidebar.classList.toggle('open');
+    profileSidebar.classList.toggle('open');
+  });
+
+  // Close menu when a nav link is clicked
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenuBtn.classList.remove('active');
+      iconSidebar.classList.remove('open');
+      profileSidebar.classList.remove('open');
+    });
+  });
+
+  // Copy to clipboard functionality for contact items
+  document.querySelectorAll('.contact-item[data-copy]').forEach(item => {
+    item.addEventListener('click', (e) => {
+      const copyText = item.getAttribute('data-copy');
+      
+      // Copy to clipboard
+      navigator.clipboard.writeText(copyText).then(() => {
+        // Show feedback
+        const originalHTML = item.innerHTML;
+        const icon = item.querySelector('.contact-icon');
+        
+        icon.innerHTML = '<i class="fas fa-check" style="color: #70a970;"></i>';
+        
+        // Reset after 2 seconds
+        setTimeout(() => {
+          icon.innerHTML = '<i class="fas fa-' + (copyText.includes('@') ? 'envelope' : 'phone') + '"></i>';
+        }, 2000);
+      }).catch(err => {
+        console.error('Failed to copy:', err);
+      });
+    });
+  });
+
+  // PDF Download functionality
+  function downloadPDF() {
+    const element = document.querySelector('main');
+    const opt = {
+      margin: 10,
+      filename: 'Joseph_Delatorre_Resume.pdf',
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { scale: 2 },
+      jsPDF: { orientation: 'portrait', unit: 'mm', format: 'a4' }
+    };
+    
+    html2pdf().set(opt).from(element).save();
+  }
+</script>
+</body>
+</html>
